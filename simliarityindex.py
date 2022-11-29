@@ -14,7 +14,7 @@ def jaccard_similarity(a, b):
     b = set(b)
 
 
-# formula to calucate jaccard similarity
+# formula to calculate jaccard similarity
     return float(len(a.intersection(b))) / len(a.union(b))
 
 
@@ -27,7 +27,7 @@ df['best_match'] = [x for x in df['RealName'].str.lower() for x in get_close_mat
 df['similarity_index'] = df.apply(lambda x: SequenceMatcher(None, x['RealName'].lower(), x['best_match']).ratio()*100, axis=1)
 
 
-# prin the results 
+# print the results 
 print(df)
 
 

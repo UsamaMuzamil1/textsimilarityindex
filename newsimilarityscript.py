@@ -9,8 +9,9 @@ def percentageOfSimilarity(str1, str2):
     return (longerLength - editDistance(longerString, shorterString)) / float(longerLength)
 
 
+
 # in this step we use two loops one for column 1 and other for column 2
-# I also used append method in both loops which is used store add single string at each time
+# I also used append method in both loops which is used to add single string at each time
 def editDistance(str1, str2):
     matrix = []
     for i in range(len(str1) + 1):
@@ -26,13 +27,20 @@ def editDistance(str1, str2):
     return matrix[len(str1)][len(str2)]
 
 
+
 # enter two strings which we used to find for similarity
 per = percentageOfSimilarity("taha", "talha")
 per1 = percentageOfSimilarity("taha", "tata")
 per2 = percentageOfSimilarity("taha", "hata")
+per3 = percentageOfSimilarity("usama", "osama")
+per4 = percentageOfSimilarity("ayesha", "ashii")
+per5 = percentageOfSimilarity("talal", "bilal")
 
 
 # now print them and also multiply by 100(percentage)
 print("Similarity percentage is :", per * 100)
 print("Similarity percentage is :", per1 * 100)
 print("Similarity percentage is :", per2 * 100)
+print("Similarity percentage is :", per3 * 100)
+print("Similarity percentage is :", per4 * 100)
+print("Similarity percentage is :", per5 * 100)
